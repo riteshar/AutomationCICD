@@ -20,6 +20,8 @@ public class StandAloneTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
                 //adding comments to push code in gitHub repository so jenkins CICD job can be triggered.
+		
+		
 
 		String productName = "ZARA COAT 3";
 		WebDriverManager.chromedriver().setup();

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-15T15:56:56 IST" name="Surefire suite" finished-at="2024-06-15T15:57:45 IST" duration-ms="48724">
+  <suite started-at="2024-06-15T16:48:53 IST" name="Suite" finished-at="2024-06-15T16:49:12 IST" duration-ms="18777">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.LoginErrorValidation()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" name="LoginErrorValidation" class="riteshsharma.tests.ErrorValidationsTest"/>
-      </group> <!-- ErrorHandling -->
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" name="submitOrder" class="riteshsharma.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" name="submitOrder" class="riteshsharma.tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7adda9cc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-06-15T15:56:56 IST" name="Surefire test" finished-at="2024-06-15T15:57:45 IST" duration-ms="48724">
+    <test started-at="2024-06-15T16:48:53 IST" name="Error Validations Test" finished-at="2024-06-15T16:48:53 IST" duration-ms="21">
+    </test> <!-- Error Validations Test -->
+    <test started-at="2024-06-15T16:48:53 IST" name="Submit Order Test" finished-at="2024-06-15T16:49:12 IST" duration-ms="18777">
       <class name="riteshsharma.tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:24 IST" name="launchApplication" finished-at="2024-06-15T15:57:27 IST" duration-ms="3442" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:48:53 IST" name="launchApplication" finished-at="2024-06-15T16:48:59 IST" duration-ms="6270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:27 IST" name="submitOrder" data-provider="getData" finished-at="2024-06-15T15:57:31 IST" duration-ms="3471" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:49:00 IST" name="submitOrder" data-provider="getData" finished-at="2024-06-15T16:49:03 IST" duration-ms="3562" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -31,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:31 IST" name="tearDown" finished-at="2024-06-15T15:57:31 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:49:03 IST" name="tearDown" finished-at="2024-06-15T16:49:03 IST" duration-ms="344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:31 IST" name="launchApplication" finished-at="2024-06-15T15:57:35 IST" duration-ms="4421" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:49:03 IST" name="launchApplication" finished-at="2024-06-15T16:49:08 IST" duration-ms="4286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:35 IST" name="submitOrder" data-provider="getData" finished-at="2024-06-15T15:57:39 IST" duration-ms="3665" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:49:08 IST" name="submitOrder" data-provider="getData" finished-at="2024-06-15T16:49:11 IST" duration-ms="3556" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,137 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:39 IST" name="tearDown" finished-at="2024-06-15T15:57:39 IST" duration-ms="339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:39 IST" name="launchApplication" finished-at="2024-06-15T15:57:43 IST" duration-ms="3800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:43 IST" name="OrderHistoryTest" finished-at="2024-06-15T15:57:44 IST" depends-on-methods="riteshsharma.tests.SubmitOrderTest.submitOrder" duration-ms="1086" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@149e0f5d]" started-at="2024-06-15T15:57:44 IST" name="tearDown" finished-at="2024-06-15T15:57:45 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.SubmitOrderTest@c8c12ac]" started-at="2024-06-15T16:49:11 IST" name="tearDown" finished-at="2024-06-15T16:49:12 IST" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- riteshsharma.tests.SubmitOrderTest -->
-      <class name="riteshsharma.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:03 IST" name="launchApplication" finished-at="2024-06-15T15:57:07 IST" duration-ms="3510" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:07 IST" name="LoginErrorValidation" finished-at="2024-06-15T15:57:07 IST" duration-ms="594" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:07 IST" name="tearDown" finished-at="2024-06-15T15:57:07 IST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:07 IST" name="launchApplication" finished-at="2024-06-15T15:57:13 IST" duration-ms="5298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidation()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:13 IST" name="ProductErrorValidation" finished-at="2024-06-15T15:57:23 IST" duration-ms="10491" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52178/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ce1dc8a708835b5b0bd88f01656f567]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52178/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ce1dc8a708835b5b0bd88f01656f567
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at riteshsharma.AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:37)
-at riteshsharma.pageobjects.ProductCatalogue.getProductList(ProductCatalogue.java:37)
-at riteshsharma.tests.ErrorValidationsTest.ProductErrorValidation(ErrorValidationsTest.java:37)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@47d90b9e]" started-at="2024-06-15T15:57:23 IST" name="tearDown" finished-at="2024-06-15T15:57:23 IST" duration-ms="243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- riteshsharma.tests.ErrorValidationsTest -->
-      <class name="cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@7adda9cc]" started-at="2024-06-15T15:56:56 IST" name="setUpClass" finished-at="2024-06-15T15:56:57 IST" duration-ms="726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@69c532af]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7adda9cc]" started-at="2024-06-15T15:56:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-15T15:57:03 IST" duration-ms="6294" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Title of your scenario outline"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Error validation"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@7adda9cc]" started-at="2024-06-15T15:57:03 IST" name="tearDownClass" finished-at="2024-06-15T15:57:03 IST" duration-ms="117" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumber.TestNGTestRunner -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
 </testng-results>
