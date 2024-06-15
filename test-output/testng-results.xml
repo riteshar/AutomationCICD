@@ -2,46 +2,29 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-28T16:42:14 IST" name="Default suite" finished-at="2024-04-28T16:42:21 IST" duration-ms="7544">
+  <suite started-at="2024-06-15T15:55:48 IST" name="Suite" finished-at="2024-06-15T15:55:54 IST" duration-ms="5580">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@3a52dba3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="ErrorHandling">
+        <method signature="ErrorValidationsTest.LoginErrorValidation()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@6a2f6f80]" name="LoginErrorValidation" class="riteshsharma.tests.ErrorValidationsTest"/>
+      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-04-28T16:42:14 IST" name="Default test" finished-at="2024-04-28T16:42:21 IST" duration-ms="7544">
-      <class name="cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@3a52dba3]" started-at="2024-04-28T16:42:14 IST" name="setUpClass" finished-at="2024-04-28T16:42:14 IST" duration-ms="691" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@588f63c]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-06-15T15:55:48 IST" name="Submit Order Test" finished-at="2024-06-15T15:55:48 IST" duration-ms="14">
+    </test> <!-- Submit Order Test -->
+    <test started-at="2024-06-15T15:55:48 IST" name="Error Validations Test" finished-at="2024-06-15T15:55:54 IST" duration-ms="5580">
+      <class name="riteshsharma.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@6a2f6f80]" started-at="2024-06-15T15:55:49 IST" name="launchApplication" finished-at="2024-06-15T15:55:53 IST" duration-ms="4099" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@3a52dba3]" started-at="2024-04-28T16:42:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-28T16:42:21 IST" duration-ms="6696" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Title of your scenario outline"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Error validation"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@6a2f6f80]" started-at="2024-06-15T15:55:53 IST" name="LoginErrorValidation" finished-at="2024-06-15T15:55:54 IST" duration-ms="1188" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@3a52dba3]" started-at="2024-04-28T16:42:21 IST" name="tearDownClass" finished-at="2024-04-28T16:42:21 IST" duration-ms="91" status="PASS">
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:riteshsharma.tests.ErrorValidationsTest@6a2f6f80]" started-at="2024-06-15T15:55:54 IST" name="tearDown" finished-at="2024-06-15T15:55:54 IST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumber.TestNGTestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- riteshsharma.tests.ErrorValidationsTest -->
+    </test> <!-- Error Validations Test -->
+  </suite> <!-- Suite -->
 </testng-results>

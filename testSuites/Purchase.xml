@@ -10,13 +10,13 @@
 
   <test thread-count="5" name="Submit Order Test">
     <classes>
-      <class name="rahulshettyacademy.tests.SubmitOrderTest"/>
+      <class name="riteshsharma.tests.SubmitOrderTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Error Validations Test">
     <classes>
-      <class name="rahulshettyacademy.tests.ErrorValidationsTest"/>
+      <class name="riteshsharma.tests.ErrorValidationsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

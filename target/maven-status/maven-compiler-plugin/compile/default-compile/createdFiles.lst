@@ -1,0 +1,8 @@
+riteshsharma\AbstractComponents\AbstractComponent.class
+riteshsharma\pageobjects\CartPage.class
+riteshsharma\pageobjects\OrderPage.class
+riteshsharma\pageobjects\ProductCatalogue.class
+riteshsharma\pageobjects\LandingPage.class
+riteshsharma\pageobjects\ConfirmationPage.class
+riteshsharma\resources\ExtentReporterNG.class
+riteshsharma\pageobjects\CheckoutPage.class
