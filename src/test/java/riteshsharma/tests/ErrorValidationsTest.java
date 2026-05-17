@@ -19,7 +19,7 @@ import riteshsharma.pageobjects.ProductCatalogue;
 public class ErrorValidationsTest extends BaseTest {
 
 	@Test(groups= {"ErrorHandling"},retryAnalyzer=Retry.class)
-	public void LoginErrorValidation() throws IOException, InterruptedException {
+	public void LoginErrorValidation() throws IOException {
 
 	
 		landingPage.loginApplication("anshika@gmail.com", "Iamki000");
@@ -29,7 +29,7 @@ public class ErrorValidationsTest extends BaseTest {
 	
 
 	@Test
-	public void ProductErrorValidation() throws IOException, InterruptedException
+	public void ProductErrorValidation() throws IOException
 	{
 
 		String productName = "ZARA COAT 3";

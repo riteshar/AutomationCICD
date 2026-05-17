@@ -36,7 +36,7 @@ public class SubmitOrderTest extends BaseTest{
 	String productName = "ZARA COAT 3";
 
 	@Test(dataProvider="getData",groups= {"Purchase"})
-	public void submitOrder(HashMap<String,String> input) throws IOException, InterruptedException
+	public void submitOrder(HashMap<String,String> input) throws IOException
 	{
 
 		
