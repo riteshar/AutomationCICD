@@ -25,6 +25,10 @@ mvn clean test -P ErrorValidation
 # Override browser at runtime (chrome | firefox | edge | chrome-headless)
 mvn clean test -P Regression -Dbrowser=chrome-headless
 
+# Run a single test class (bypasses suite XML, uses Surefire directly)
+mvn clean test -Dtest=SubmitOrderTest
+mvn clean test -Dtest=ErrorValidationsTest#LoginErrorValidation
+
 # Build without running tests
 mvn clean install -DskipTests
 ```
@@ -36,11 +40,11 @@ mvn clean install -DskipTests
 | Regression | testSuites/testng.xml | (all) |
 | Purchase | testSuites/Purchase.xml | Purchase |
 | ErrorValidation | testSuites/ErrorValidationTests.xml | ErrorHandling |
-| CucumberTests | TestNGTestRunner.java | @ErrorValidation tag |
+| CucumberTests | TestNGTestRunner.java | @ErrorValidation tag only |
 
 ### Reports
 
-- **ExtentReports HTML:** `reports/index.html`
+- **ExtentReports HTML:** `reports/index.html` (also where failure screenshots land)
 - **Cucumber HTML:** `target/cucumber.html`
 - **TestNG results:** `test-output/`
 
@@ -58,17 +62,20 @@ Page flow: `LandingPage` → `ProductCatalogue` → `CartPage` → `CheckoutPage
 ### Test Layer
 
 `src/test/java/riteshsharma/TestComponents/`:
-- **BaseTest** — WebDriver lifecycle (BeforeMethod/AfterMethod), reads browser from `GlobalData.properties` (overridable via `-Dbrowser=`), JSON test data parsing, screenshot capture
-- **Listeners** — TestNG listener wiring ExtentReports; uses `ThreadLocal<ExtentTest>` for thread-safe parallel reporting
-- **Retry** — Retries failed tests once (configurable via `retryCount`)
+- **BaseTest** — WebDriver lifecycle (`@BeforeMethod`/`@AfterMethod`), reads browser from `GlobalData.properties` (overridable via `-Dbrowser=`), JSON test data parsing, screenshot capture
+- **Listeners** — TestNG listener wiring ExtentReports; uses `ThreadLocal<ExtentTest>` for thread-safe parallel reporting; accesses the test instance's `driver` field via reflection on failure to capture screenshots
+- **Retry** — Retries failed tests once (`maxTry=1`)
 
 `src/test/java/riteshsharma/tests/`:
-- **SubmitOrderTest** — Data-driven purchase flow; `OrderHistoryTest` declares a `dependsOnMethods` on `submitOrder`
-- **ErrorValidationsTest** — Login and cart error message validation
+- **SubmitOrderTest** — Data-driven purchase flow via `@DataProvider` (reads `PurchaseOrder.json`); `OrderHistoryTest` declares `dependsOnMethods={"submitOrder"}` and uses hardcoded credentials (not from DataProvider)
+- **ErrorValidationsTest** — Login and cart error message validation; `LoginErrorValidation` uses `retryAnalyzer=Retry.class`
+- **StandAloneTest** — Scratch exploration script with a `main()` method; not wired to any suite or profile, not intended to be run via Maven
 
 ### BDD / Cucumber
 
-`src/test/java/cucumber/` contains feature files and `TestNGTestRunner`. `StepDefinitionImpl` **extends BaseTest** to reuse driver setup and helpers — this means step definitions share the same lifecycle as regular TestNG tests.
+`src/test/java/cucumber/` contains feature files and `TestNGTestRunner`. `StepDefinitionImpl` **extends BaseTest** to reuse driver setup — step definitions share the same `@BeforeMethod`/`@AfterMethod` lifecycle.
+
+**Important:** `TestNGTestRunner` is hardcoded to `tags = "@ErrorValidation"`. `SubmitOrder.feature` uses `@Regression` and will **not** run under the `CucumberTests` profile despite existing in the same directory.
 
 ### Test Data
 
@@ -80,7 +87,8 @@ Page flow: `LandingPage` → `ProductCatalogue` → `CartPage` → `CheckoutPage
 
 ## Key Patterns
 
-- **Java 8 Streams** are used extensively to find `WebElement`s by visible text (e.g., matching product names in a list).
+- **Java 8 Streams** are used to find `WebElement`s by visible text (e.g., matching product names in a list).
 - **Actions API** is used for the country autocomplete dropdown on CheckoutPage — it types characters, not selecting via `<select>`.
-- **Parallel execution** is configured in `testng.xml` with `parallel="tests"` and `thread-count="5`; ExtentReports uses `ThreadLocal` to keep reports isolated per thread.
+- **Parallel execution** is configured in `testng.xml` with `parallel="tests"` at suite level; ExtentReports uses `ThreadLocal` to keep reports isolated per thread.
 - **Headless mode** requires `-Dbrowser=chrome-headless`; BaseTest sets a fixed window size (`1440x900`) when headless is active.
+- **`waitForElementToDisappear`** currently uses `Thread.sleep(1000)` — the WebDriverWait-based implementation is commented out in `AbstractComponent.java`.
